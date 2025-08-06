@@ -14,7 +14,8 @@ export function App() {
       try {
         const data_url = "https://api.npoint.io/86690d80ff3d455133f0";
         const response = await fetch(data_url);
-        const data = await response.json() as Robot[];
+        const data = await response.json() as Robot[];   
+        // const data = await (await fetch(data_url)).json() as Robot[];  
         // console.table(data);
         // console.log(`${data.length} items loaded`);
         setRobotsList(data);
